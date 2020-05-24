@@ -1,6 +1,8 @@
+<!-- Javascript Code -->
 <script>
   let strength = 0;
   let validations = [];
+  let showPassword = false;
 
   function validatePassword(e) {
     const password = e.target.value;
@@ -17,6 +19,7 @@
 
 </script>
 
+<!-- Style Code -->
 <style>
   form {
     --text-color: #afafaf;
@@ -120,10 +123,16 @@
   .bar-4 {
     background: linear-gradient(to right, yellowgreen, green);
   }
+
+  .toggle-password {
+    position: absolute;
+    cursor: help;
+    font-size: 0.8rem;
+    right: 0.25rem;
+    bottom: 0.5rem;
+  }
 </style>
 
-<!-- Javascript Code -->
-<!-- Style Code -->
 <!-- HTNML Code -->
 <main>
   <form>
@@ -133,9 +142,16 @@
     </div>
 
     <div class="field">
-      <input type="password" name="password" class="input" placeholder="" on:input = { validatePassword }/>
+      <input type={showPassword ? 'text' : 'password'} name="password" class="input" placeholder="" on:input = { validatePassword }/>
       <label for="password" class="label">Password</label>
+
+      <span class="toggle-password"
+        on:mouseenter={() => (showPassword = true)} on:mouseleave={() => (showPassword = false)}>
+          { showPassword ? '🙈' : '👁️' }
+      </span>
     </div>
+
+    
 
     <div class="strength">
       <span class="bar bar-1" class:bar-show={ strength > 0 } />
