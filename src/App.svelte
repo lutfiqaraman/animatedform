@@ -83,6 +83,26 @@
     box-shadow: inset 0 20px #1f1f1f;
   }  
 
+  .bar-show {
+    box-shadow: none;
+  }
+
+  .bar-1 {
+    background: linear-gradient(to right, red, orangered);
+  }
+
+  .bar-2 {
+    background: linear-gradient(to right, orangered, yellow);
+  }
+
+  .bar-3 {
+    background: linear-gradient(to right, yellow, yellowgreen);
+  }
+
+  .bar-4 {
+    background: linear-gradient(to right, yellowgreen, green);
+  }
+
 </style>
 
 <!-- HTNML Code -->
