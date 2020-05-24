@@ -84,5 +84,19 @@
       <label for="password" class="label">Password</label>
     </div>
 
+    <div>
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+      <span class="bar bar-4"></span>
+    </div>
+
+    <ul>
+      <li>must be at least 5 characters</li>
+      <li>must contain a capital letter</li>
+      <li>must contain a number</li>
+      <li>must contain a special letter such as #&!</li>
+    </ul>
+
   </form>
 </main>
